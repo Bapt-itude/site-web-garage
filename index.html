@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garage LESIMPLE - Réparations automobiles & radiateurs</title>
+    <meta name="description" content="Garage automobile à Alençon, spécialisé en réparation de radiateurs et mécanique générale. Véhicules courants et modèles d'exception. Devis gratuit.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -279,6 +280,12 @@
                 <h3>Notre adresse</h3>
                 <p>87 Bis Avenue Rhin et Danube</p>
                 <p>61000 Alençon, France</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=87+Bis+Avenue+du+Rhin+et+Danube+61000+Alençon"
+                    target="_blank"
+                    class="btn"
+                    style="display:inline-block; margin-top:1rem; padding:0.5rem 1.2rem; font-size:0.9rem;">
+                    Voir l'itinéraire
+                </a>
             </div>
             <div class="info-card" id="contact">
                 <i class="fa-solid fa-phone"></i>
@@ -295,9 +302,14 @@
             <p style="text-align: center; margin-bottom: 2rem;">
                 Découvrez en visuel nos travaux de rénovation radiateurs ainsi que les véhicules rares passés entre nos mains.
             </p>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="radiateur">Radiateurs</button>
+                <button class="filter-btn" data-filter="exception">Véhicules d'exception</button>
+            </div>
             <div class="gallery-grid">
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="radiateur">
                     <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Rénovation radiateur">
                     <div class="gallery-content">
                         <span class="gallery-tag">Radiateur & Refroidissement</span>
@@ -306,7 +318,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="exception">
                     <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Voiture de collection">
                     <div class="gallery-content">
                         <span class="gallery-tag">Véhicule d'Exception</span>
@@ -315,7 +327,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="radiateur">
                     <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Sur-mesure radiateur alu">
                     <div class="gallery-content">
                         <span class="gallery-tag">Radiateur & Refroidissement</span>
@@ -330,6 +342,28 @@
     <footer>
         <p>&copy; 2026 Garage LESIMPLE - Tous droits réservés.</p>
     </footer>
+
+    <script>
+        const boutons = document.querySelectorAll('.filter-btn');
+        const cartes = document.querySelectorAll('.gallery-item');
+
+        boutons.forEach(bouton => {
+            bouton.addEventListener('click', () => {
+                boutons.forEach(b => b.classList.remove('active'));
+                bouton.classList.add('active');
+
+                const filtre = bouton.dataset.filter;
+
+                cartes.forEach(carte => {
+                    if (filtre === 'all' || carte.dataset.category === filtre) {
+                        carte.style.display = 'block';
+                    } else {
+                        carte.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
