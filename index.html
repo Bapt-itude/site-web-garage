@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,6 +208,27 @@
             object-fit: cover;
         }
 
+        .gallery-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #e9ecef;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #adb5bd;
+        }
+
+        .gallery-placeholder i {
+            font-size: 2.5rem;
+        }
+
+        .gallery-placeholder span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
         .gallery-content {
             padding: 1.2rem;
         }
@@ -250,7 +271,7 @@
         "name": "Garage LESIMPLE",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "87 Bis Avenue du Rhin et Danube",
+            "streetAddress": "87 Bis Avenue Rhin et Danube",
             "addressLocality": "Alençon",
             "postalCode": "61000",
             "addressCountry": "FR"
@@ -264,7 +285,7 @@
 <body>
     <header>
         <div class="logo">
-            <i class="fa-solid fa-wrench"></i> Garage Auto & Radiateurs
+            <i class="fa-solid fa-wrench"></i> Garage LESIMPLE
         </div>
         <nav>
             <ul>
@@ -297,7 +318,7 @@
                 <h3>Notre adresse</h3>
                 <p>87 Bis Avenue Rhin et Danube</p>
                 <p>61000 Alençon, France</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=87+Bis+Avenue+du+Rhin+et+Danube+61000+Alençon"
+                <a href="https://www.google.com/maps/search/?api=1&query=87+Bis+Avenue+Rhin+et+Danube+61000+Alençon"
                     target="_blank"
                     class="btn"
                     style="display:inline-block; margin-top:1rem; padding:0.5rem 1.2rem; font-size:0.9rem;">
@@ -327,29 +348,38 @@
             <div class="gallery-grid">
 
                 <div class="gallery-item" data-category="radiateur">
-                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Rénovation radiateur">
+                    <div class="gallery-placeholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Photo à venir</span>
+                    </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">Radiateur & Refroidissement</span>
-                        <h3>Rénovation Radiateur en Cuivre</h3>
-                        <p>Détartrage complet, soudures à l'étain et remise sous pression pour ce radiateur d'époque.</p>
+                        <h3>Rénovation de radiateur</h3>
+                        <p>Exemple de rénovation à venir - détartrage, soudure et remise sous pression.</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" data-category="exception">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Voiture de collection">
+                    <div class="gallery-placeholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Photo à venir</span>
+                    </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">Véhicule d'Exception</span>
-                        <h3>Porsche Classic - Révision Moteur</h3>
-                        <p>Passage à l'atelier pour un réglage carburation et réfection du circuit de refroidissement.</p>
+                        <h3>Véhicule rare en atelier</h3>
+                        <p>Exemple à venir - nos interventions sur des modèles peu communs.</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" data-category="radiateur">
-                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Sur-mesure radiateur alu">
+                    <div class="gallery-placeholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Photo à venir</span>
+                    </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">Radiateur & Refroidissement</span>
-                        <h3>Fabrication Faisceau Aluminium</h3>
-                        <p>Conception d'un faisceau haute performance sur-mesure pour voiture de course ancienne.</p>
+                        <h3>Fabrication sur-mesure</h3>
+                        <p>Exemple à venir - faisceaux et réparations sur-mesure.</p>
                     </div>
                 </div>
             </div>
